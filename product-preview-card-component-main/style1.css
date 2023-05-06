@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+/* font-family: 'Fraunces', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    /* position: relative; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+
+    margin: 30px auto;
+    padding: 0 30px;
+
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden; */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-content img {
+    max-width: 100%;
+    display: inherit;
+
+}
+h6.pro-cat{
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color:hsl(228, 12%, 48%) ;
+    /* font-family:'Montserrat', sans-serif ; */
+    font-weight: 500;
+    
+}
+.right-content {
+    
+    padding: 35px;
+    /* max-width: 700px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2.pro-name {
+    margin: 15px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height:1em;
+    color: hsl(212, 21%, 14%);
+    padding-right: 20px;
+    
+    
+}
+p.pro-des{
+     line-height: 1.6em;
+     font-weight: 500;
+     color:  hsl(228, 12%, 48%);
+     max-width: 245px;
+     margin-right:-20px;
+     font-size: 15.3px;
+
+
+}
+
+p.current-price{
+    font-family: 'Fraunces', serif;
+    color:  hsl(158, 36%, 37%);
+    font-size: 34px;
+}
+p.old-price{
+    color:  hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 15.3px;
+}
+.price-box{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta{
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    background-color: hsl(158, 36%, 37%);
+    padding:20px 0;
+    
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color .3s ease;
+}
+
+.cta:hover{
+    background-color:   hsl(157, 38%, 18%);
+    cursor: pointer;
+}
+
+@media only screen and ( max-width: 660px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .left-content img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover ;
+        }
+        .container {
+            margin: 15px auto;
+            padding: 0 15px;
+        }
+}
+ 
+
+@media only screen and ( max-width: 425px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .container {
+        margin: 15px 10px;
+        /* padding: 0 15px; */
+    }
+    .left-content img{
+        max-height: 290px;
+        width: 100%;
+        object-fit: cover ;
+        }
+        h6.pro-cat{
+            text-transform:uppercase;
+            letter-spacing: 3px;
+            font-size: 15px;
+            color:hsl(228, 12%, 48%) ;
+            /* font-family:'Montserrat', sans-serif ; */
+            font-weight: 500;
+            margin-top:-10px;
+            
+        }
+        h2.pro-name {
+            margin: 20px 0;
+            font-family: 'Fraunces', serif;
+            font-size: 32px;
+            line-height:1em;
+            color: hsl(212, 21%, 14%);
+            /* padding-right: 20px; */
+
+            
+        }
+        p.pro-des{
+            line-height: 1.6em;
+            font-weight: 500;
+            color:  hsl(228, 12%, 48%);
+            max-width: 700px;
+            /* margin-right:-20px; */
+            font-size: 14px;
+       }
+       p.current-price{
+        font-family: 'Fraunces', serif;
+        color:  hsl(158, 36%, 37%);
+        font-size: 34px;
+        margin: 20px 0;
+    }
+}
+@media only screen and ( max-width: 375px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .left-content img{
+        max-height: 260px;
+        width: 100%;
+        object-fit: cover ;
+        }
+}
+@media only screen and ( max-width: 320px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .left-content img{
+        max-height: 230px;
+        width: 100%;
+        object-fit: cover ;
+        }
+}
+ 
+ 
